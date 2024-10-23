@@ -1,0 +1,173 @@
+* { margin:0; padding:0 ; box-sizing: border-box;}
+a { text-decoration: none;}
+html { scroll-behavior: smooth;  }
+#header { background-color: lightgoldenrodyellow; text-align: center; padding: 20px 0; }
+#header a { margin: 0 10px;  font-size: 1.2em;}
+#header a:hover { text-decoration: underline; font-weight: 600;}
+#menu { 
+    background-color: rgb(242, 245, 248); height:60px; line-height: 60px;text-align: center;
+    position: sticky; top:0; left:0
+}
+#menu li { list-style: none; display: inline-block; margin:auto 8px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+#menu a { font-size: 1.2em; color:rgb(230, 91, 41);  margin:8px auto 8px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+#menu a:hover { color:rgb(196, 124, 30); text-decoration:none;} 
+
+#spmoi { background-color:none; padding-top:40px}
+#spmoi h2 { text-align: center; text-transform: uppercase; }
+#spmoi #data { display: flex; flex-wrap: wrap; margin-top: 30px; 
+justify-content: space-between;}
+#spmoi #data .sp { 
+    width: 29%; text-align: center; border: 1px solid rgb(2, 11, 2) ; 
+    padding: 10px;  margin: 10px; font-size: 1.2em;
+    border-radius: 5px;  box-shadow: 1px 1px 1px salmon;
+}
+#spmoi #data .sp h2 { margin-bottom:10px; font-size: 1.2em; height: 45px  }
+#spmoi #data .sp p { margin: 10px;}
+#spmoi #data .sp img { width: 70%; height: 250px; margin: auto; }
+
+
+
+#sphot { background-color: none; padding-top:40px}
+#sphot h2 { text-align: center; text-transform: uppercase; }
+#sphot #data { display: flex; flex-wrap: wrap; margin-top: 30px; justify-content: space-between;}
+#sphot #data .sp { 
+    width: 29%; text-align: center; border: 1px solid rgb(0, 0, 0) ; 
+    padding: 10px;  margin: 10px; font-size: 1.2em;
+    border-radius: 5px;  box-shadow: 1px 1px 1px salmon;
+}
+#sphot #data .sp h3 { margin-bottom:10px; font-size: 1.2em; height: 45px  }
+#sphot #data .sp p { margin: 10px;}
+#sphot #data .sp img { width: 90%; height: 250px; margin: auto;  border:none}   
+
+.btsp{background-color: rgb(108, 196, 107);border: none; border-radius: 2px;color: white; width: max-content; height: max-content;}
+.btsp:hover{background-color: #7b9dbf;}
+#bai_viet_moi { background-color: rgb(255, 255, 255); padding-top:40px ; }
+#bai_viet_moi h2 { text-align: center; text-transform: uppercase; }
+#bai_viet_moi #data { display: flex; flex-wrap: wrap; margin-top: 30px; justify-content: space-between;}
+#bai_viet_moi #data .bv { 
+    width: 31%; text-align: center; border: 1px solid darkgreen ; 
+    padding: 10px;  margin: 10px; font-size: 1.2em;
+    border-radius: 5px;  box-shadow: 1px 1px 1px salmon;
+}
+#bai_viet_moi #data .bv h3 { margin-bottom:10px; font-size: 1.2em; height: 45px  }
+#bai_viet_moi #data .bv p { margin: 10px; text-align: justify; line-height: 150%;}
+#bai_viet_moi #data .bv img { width: 90%; height: 250px; margin: auto;  border: 1px solid black}
+
+
+
+#binh_luan { background-color:  beige; padding-top:40px}
+#binh_luan h2 { text-align: center; text-transform: uppercase; }
+#binh_luan #data { display: flex; flex-wrap: wrap; margin-top: 30px; justify-content: space-between;}
+#binh_luan #data .bl { 
+    width: 47%; text-align: center; border: 1px solid rgb(0, 0, 0) ; 
+    padding: 10px;  margin: 10px; font-size: 1.2em;
+    border-radius: 5px;  box-shadow: 1px 1px 1px salmon;
+}
+#binh_luan #data .bl h5 { margin-bottom:10px; font-size: 1em;; text-align: left; }
+#binh_luan #data .bl h5 span { float:right}
+#binh_luan #data .bl p { margin: 10px; text-align: justify; line-height: 150%; max-height:200px; overflow:hidden; text-overflow: ellipsis;  }
+
+
+
+#anh_dep { background-color:  lightcyan; padding-top:40px}
+#anh_dep h2 { text-align: center; text-transform: uppercase; }
+#anh_dep #data { display: flex; flex-wrap: wrap; margin-top: 30px; justify-content: space-between;}
+#anh_dep #data .hinh { 
+    width: 31%; text-align: center; border: 1px solid darkgreen ; 
+    padding: 10px;  margin: 10px; font-size: 1.2em;
+    border-radius: 5px;  box-shadow: 1px 1px 1px salmon;
+}
+#anh_dep #data .hinh img { width: 100%; height: 250px; margin: auto;  border: 1px solid black}
+
+a.icontop {
+    float:right;
+    width: 35px; height: 35px; line-height: 30px;
+    border-radius: 50%; font-size: 1em;
+    border: 2px solid darkblue; color:darkblue;
+    cursor: pointer; margin-right: 20px;
+}
+a.icontop2 {
+    position: fixed; bottom: 10px; left: 5px;
+    width: 35px; height: 35px; line-height: 35px;
+    border-radius: 50%; font-size: 1.3em;
+    background-color: darkorange;
+    color:white;
+    cursor: pointer;  text-align: center;
+}
+
+
+#sp_trong_loai { background-color: beige; padding-top:40px}
+#sp_trong_loai h2 { text-align: center; text-transform: uppercase; }
+#sp_trong_loai #data { display: flex; flex-wrap: wrap; margin-top: 30px; justify-content: space-between;}
+#sp_trong_loai #data .sp { 
+    width: 29%; text-align: center; border: 1px solid darkgreen ;  color: #3b3630;
+    padding: 10px;  margin: 10px; font-size: 1.2em;
+    border-radius: 5px;  box-shadow: 1px 1px 1px salmon;
+}
+#sp_trong_loai #data .sp h3 { margin-bottom:10px; font-size: 1.2em; height: 45px  }
+#sp_trong_loai #data .sp p { margin: 10px;}
+#sp_trong_loai #data .sp img { width: 80%; height: 250px; margin: auto; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: #7b9dbf;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #1a1616;
+}
+
+p, a {
+    font-size: 14px;
+    color: #1c1616;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+a:hover {
+    color: #000;
+}
+
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    color: #666;
+}

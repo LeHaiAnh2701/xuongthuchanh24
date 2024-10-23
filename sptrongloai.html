@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Store Local Brand</title>
+    <link rel="stylesheet" href="css/c1.css">
+</head>
+<body>
+<div class="container">
+    <a href="#top" class="icontop2">&#8657;</a>
+    <nav id="menu"> </nav>
+    <main>
+        <section id="sp_trong_loai">
+            <h2> <span id="tenloai"></span> </h2>
+            <div id="data"></div> 
+        </section>
+    </main>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <!-- Column 1: About Us -->
+            <div class="col">
+                <h5>Về chúng tôi</h5>
+                <p>Chúng tôi rất hân hạnh được phục vụ quý khách hy vọng quý khách sẽ hài lòng với dịch vụ của chúng tôi .</p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div class="col">
+                <h5>Danh Mục</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#top">Trang chủ</a></li>
+                    <li><a href="#top">Sản phẩm nổi bật</a></li>
+                    <li><a href="/baiviet.html">Bài viết</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Contact Info -->
+            <div class="col">
+                <h5>Liên Hệ</h5>
+                <p>Email: anhlhps35305@fpt.edu.vn</p>
+                <p>Phone: +123-456-7890</p>
+                <p>Address: Ho Chi Minh City</p>
+            </div>
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="footer-bottom text-center">
+            <p>&copy; 2024 .PS35305.Lê Hải Anh.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+<script type="module">
+import { lay_loai, lay_sp_trong_loai, lay_ten_loai} from './js/app.js';
+let params = new URLSearchParams(location.search);
+let id = Number(params.get("id")) ; 
+document.querySelector("#menu").innerHTML = await lay_loai();
+document.querySelector("#sp_trong_loai #data").innerHTML = await lay_sp_trong_loai(id);
+document.querySelector("#sp_trong_loai #tenloai").innerHTML = await lay_ten_loai(id);
+document.querySelector("#spmoi #data").innerHTML = sp_moi_html;
+document.querySelector("#sphot #data").innerHTML = await lay_sp_hot(6);
+document.querySelector("#bai_viet_moi #data").innerHTML = await lay_bai_viet_moi(6);
+document.querySelector("#binh_luan #data").innerHTML = await lay_binh_luan(4);
+document.querySelector("#anh_dep #data").innerHTML = await lay_anh_dep("thanh");
+</script>

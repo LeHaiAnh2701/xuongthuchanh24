@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/c1.css">
+    </head>
+    <title>Bài viết</title>
+    <body>
+       
+        <div> <img src="images/slide/nen5.jpg
+            " width="100%"></div>
+        <!-- Thêm các section khác nếu cần -->
+        <section id="menu"></section>
+        <section id="bai_viet_moi">
+            <h2>Bài viết Nổi Bật<a class="" href="#top"></a> </h2>
+            <div id="data"></div> 
+        </section>
+    
+   
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <!-- Column 1: About Us -->
+                    <div class="col">
+                        <h5>Về chúng tôi</h5>
+                        <p>Chúng tôi rất hân hạnh được phục vụ quý khách hy vọng quý khách sẽ hài lòng với dịch vụ của chúng tôi .</p>
+                    </div>
+        
+                    <!-- Column 2: Quick Links -->
+                    <div class="col">
+                        <h5>Danh Mục</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#top">Trang chủ</a></li>
+                            <li><a href="#top">Sản phẩm nổi bật</a></li>
+                            <li><a href="/baiviet.html">Bài viết</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Column 3: Contact Info -->
+                    <div class="col">
+                        <h5>Liên Hệ</h5>
+                        <p>Email: anhlhps35305@fpt.edu.vn</p>
+                        <p>Phone: +123-456-7890</p>
+                        <p>Address: Ho Chi Minh City</p>
+                    </div>
+                </div>
+        
+                <!-- Footer bottom -->
+                <div class="footer-bottom text-center">
+                    <p>&copy; 2024 .PS35305.Lê Hải Anh.</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <!-- Chú ý thêm 'type="module"' cho script -->
+    <script type="module">
+        import { lay_loai, lay_sp_moi, lay_sp_hot, lay_bai_viet_moi, lay_binh_luan, lay_anh_dep } from './js/app.js';
+
+        async function hienThiDuLieu() {
+            try {
+                let loai_html = await lay_loai(); 
+                let sp_moi_html = await lay_sp_moi(6); 
+
+                document.querySelector("#menu").innerHTML = loai_html;
+                document.querySelector("#bai_viet_moi #data").innerHTML = await lay_bai_viet_moi(9);
+                document.querySelector("#binh_luan #data").innerHTML = await lay_binh_luan(4);
+               
+
+            } catch (error) {
+                console.error("Lỗi khi tải dữ liệu:", error);
+            }
+        }
+
+        // Gọi hàm hiển thị dữ liệu
+        hienThiDuLieu();
+    </script>
+</html>
